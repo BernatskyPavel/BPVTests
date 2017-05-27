@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BPVTests.App" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.QuestionsData">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAAAIAAAAAAAAAIAAAAAEAAAAAAAAQAAiAAAAAA=</HashCode>
+      <FileName>DataClasses\QuestionsData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.AnswersData">
+    <Position X="10.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAIAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>DataClasses\QuestionsData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.Resourses">
+    <Position X="12.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAgAAQAAgAAAEAABAAEAACAAACAAAAAAKCBAAAI=</HashCode>
+      <FileName>DataClasses\Resourses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.dbAnswer">
+    <Position X="12.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAgAAAAAAgAEAAAAAAAAAAAAAAAAAAAACAAAAQA=</HashCode>
+      <FileName>dbClasses\dbAnswer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.dbCats">
+    <Position X="10.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dbClasses\dbCats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.dbQuestion">
+    <Position X="9" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAgBAAAAAAAAAEAAAAAAAAAAAAAAAAAQAAiAAAAAA=</HashCode>
+      <FileName>dbClasses\dbQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.dbTest">
+    <Position X="9" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAggCEAAAAAAAAAAAAAAQAAAAAAAAACAA=</HashCode>
+      <FileName>dbClasses\dbTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.dbTests">
+    <Position X="10.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dbClasses\dbTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.dbUsers">
+    <Position X="10.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>dbClasses\dbUsers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AADBgAAAAAAIJmkAABQChAAAEAiBAQEAARA5IiICIgE=</HashCode>
+      <FileName>MainWindow\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BPVTests.About" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OtherWindows\About.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BPVTests.Auth" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OtherWindows\Auth.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BPVTests.CreateCat" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>OtherWindows\CreateCat.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BPVTests.CreateTest" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAQAAAAAAAAAAAAEAAIAAAAAAAEAg=</HashCode>
+      <FileName>OtherWindows\CreateTest.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BPVTests.Test" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQEkAAEAAAYAggAFCQABAAAQAABAAEAQQBhACIAQgA=</HashCode>
+      <FileName>Test\Test.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BPVTests.DataClasses.CFG">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAIAAAAAABAAAABAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.Properties.Resources">
+    <Position X="8.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BPVTests.Properties.Settings">
+    <Position X="8.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
