@@ -1,0 +1,266 @@
+﻿<Window x:Class="BPVTests.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BPVTests"
+        xmlns:al="http://schemas.AvalonControls/AvalonControlsLibrary/Controls"
+        mc:Ignorable="d"
+        Title="BPVTests" Height="600" Width="800" MinHeight="600" MinWidth="800" Closing="Window_Closing" Icon="pack://application:,,,/Icon/note.png">
+    <Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Backgrounds/back.jpg"/>
+    </Window.Background>
+    <Grid>
+        <TabControl>
+            <TabItem Width="200" Height="20" Header="{DynamicResource CreatorPanel}" Name="CreatorItem">
+                <Grid Name="Main">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Menu Grid.Row="0">
+                        <MenuItem Header="{DynamicResource CreatorMenuCreate}" Name="CreateTest" Click="CreateTest_Click"/>
+                        <MenuItem IsEnabled="False" Header="{DynamicResource CreatorMenuSave}" Name="SaveTest" Click="SaveTest_Click"/>
+                        <MenuItem Header="{DynamicResource CreatorUserMenuLocal}" Name="Options">
+                            <MenuItem Header="{DynamicResource CreatorUserMenuLocal0}" Tag="ru-RU" Click="Options_Click"/>
+                            <MenuItem Header="{DynamicResource CreatorUserMenuLocal1}" Tag="en-US" Click="Options_Click"/>
+                        </MenuItem>
+                        <MenuItem Header="{DynamicResource CreatorUserMenuAbout}" Name="About" Click="About_Click"/>
+                        <MenuItem Header="{DynamicResource CreatorUserMenuLogout}" Name="LogOutC" Click="LogOut_Click"/>
+                    </Menu>
+                    <Grid Name="WorkPanel" Grid.Row="1" IsEnabled="true">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.Row="1">
+                        <StackPanel IsEnabled="False" Grid.Column="0" Name="Questions" Background="Gray" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <StackPanel Height="32" Background="White">
+                                    <Label Name="LabelQ" Content="{DynamicResource QuestionsList}" HorizontalContentAlignment="Center" Height="32" Background="White">
+                                        <Label.Style>
+                                            <Style>
+                                                <Setter Property="TextBlock.FontStyle" Value="Oblique"/>
+                                            </Style>
+                                        </Label.Style>
+                                    </Label>
+                                </StackPanel>
+                                <StackPanel Name="QuestionList">
+
+                                </StackPanel>
+                            </StackPanel>
+                    </ScrollViewer>
+                        <Grid Name="WorkPanelMini" Grid.Column="1" >
+                            <!--IsEnabled="False" Visibility="Hidden"-->
+                            
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                    <Grid Name="QuestionForm" Grid.Row="0" IsEnabled="false">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                    <Grid Background="White">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition MinHeight="150" Height="*"/>
+                                            <RowDefinition Height="2*"/>
+                                        </Grid.RowDefinitions>
+                                        <ScrollViewer Grid.Row="0" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+                                                <Label Grid.Row="0" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Top" Content="{DynamicResource QuestionText}"/>
+                                                <Image Grid.Row="1" Name="QuestionPicture" Source="pack://application:,,,/Icon/add.png" Height="32" Width="32" ToolTip="{DynamicResource ToolTipQPic}" MouseDown="ImageOpen_MouseDown"/>
+                                                <TextBox Background="Wheat" Name="QuestionText" Height="100" Width="400" Grid.Row="2" TextChanged="QuestionText_TextChanged" ToolTip="{DynamicResource ToolTipQText}" />
+                                            </Grid>
+                                        </ScrollViewer>
+                                        <ScrollViewer Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                            <StackPanel AllowDrop="False" Name="Answers" HorizontalAlignment="Center" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="Grid_PreviewMouseLeftButtonUp" PreviewMouseMove="Grid_PreviewMouseMove" DragEnter="Grid_DragEnter" Drop="Grid_Drop">
+                                           
+                                            </StackPanel>
+                                        </ScrollViewer>
+                                    </Grid>
+                                </ScrollViewer>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <ComboBox Name="TypeComboBox" Grid.Column="0" FontSize="14" SelectionChanged="TypeComboBox_SelectionChanged" ToolTip="{DynamicResource ToolTipQType}">
+                                        <ComboBoxItem Content="{DynamicResource QuestionType0}"/>
+                                        <ComboBoxItem Content="{DynamicResource QuestionType1}"/>
+                                        <ComboBoxItem Content="{DynamicResource QuestionType2}"/>
+                                        <ComboBoxItem Content="{DynamicResource QuestionType3}"/>
+                                        <ComboBoxItem Content="{DynamicResource QuestionType4}"/>
+                                        <ComboBoxItem Content="{DynamicResource QuestionType5}"/>
+                                    </ComboBox>
+                                    <ComboBox Name="DifficultComboBox" Grid.Column="1" FontSize="14" ToolTip="{DynamicResource ToolTipDType}" SelectionChanged="DifficultComboBox_SelectionChanged">
+                                        <ComboBoxItem Content="{DynamicResource DifficultType0}"/>
+                                        <ComboBoxItem Content="{DynamicResource DifficultType1}"/>
+                                        <ComboBoxItem Content="{DynamicResource DifficultType2}"/>
+                                        <ComboBoxItem Content="{DynamicResource DifficultType3}"/>
+                                        <ComboBoxItem Content="{DynamicResource DifficultType4}"/>
+                                    </ComboBox>
+                                </Grid>
+                                <Button Name="AddAnswer" Content="{DynamicResource AddAnswerButton}" Grid.Row="1" FontSize="14" Click="AddAnswer_Click"/>
+                            </Grid>
+                    </Grid>
+                </Grid>
+             </Grid>
+            </TabItem>
+            <TabItem Width="200" Height="20" Header="{DynamicResource UserPanel}" Name="UserItem" Margin="-3,0,3,0" Loaded="UserItem_Loaded">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Menu Grid.Row="0">
+                        <MenuItem Name="StartTest" Header="{DynamicResource UserMenuStart}" Click="StartTest_Click"/>
+                        <MenuItem Name="DeleteTest" Header="{DynamicResource UserMenuDelete}" ToolTip="{DynamicResource UserMenuDeleteToolTip}" Click="DeleteTest_Click"/>
+                        <MenuItem Header="{DynamicResource CreatorUserMenuLocal}" Name="OptionsU">
+                            <MenuItem Header="{DynamicResource CreatorUserMenuLocal0}" Tag="ru-RU" Click="Options_Click"/>
+                            <MenuItem Header="{DynamicResource CreatorUserMenuLocal1}" Tag="en-US" Click="Options_Click"/>
+                        </MenuItem>
+                        <MenuItem Header="{DynamicResource CreatorUserMenuAbout}" Name="AboutU" Click="About_Click"/>
+                        <MenuItem Header="{DynamicResource CreatorUserMenuLogout}" Name="LogOutU" Click="LogOut_Click"/>
+                    </Menu>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="32"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Label Content="{DynamicResource TestsLabel}" HorizontalContentAlignment="Center" FontSize="16" FontStyle="Oblique" Grid.Row="0"/>
+                            <ScrollViewer Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                            <TreeView Name="TestsTree">
+                                  
+                            </TreeView>
+                          </ScrollViewer>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" HorizontalContentAlignment="Center" FontSize="20" Background="Transparent" Content="{DynamicResource TestConfigLabel}"/>
+                            <Grid Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0" Background="LightGray">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Content="{DynamicResource TestConfigFisherA}" HorizontalContentAlignment="Center" FontSize="15" ToolTip="{DynamicResource ToolTipFisherA}"/>
+                                    <CheckBox Name="FisherYates" Grid.Column="1" IsChecked="False" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                                <Grid Grid.Row="2" Background="LightGray">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Content="{DynamicResource TestConfigFisherQ}" HorizontalContentAlignment="Center" FontSize="15" ToolTip="{DynamicResource ToolTipFisherQ}"/>
+                                    <CheckBox Name="FisherYatesQuestion" Grid.Column="1" IsChecked="False" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="1" Background="LightGray">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Content="{DynamicResource TestConfigStrong}" HorizontalContentAlignment="Center" FontSize="15" ToolTip="{DynamicResource ToolTipStrong}"/>
+                                    <CheckBox Name="StrongQuestions" Grid.Column="1" IsChecked="False" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0" Background="LightGray">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Content="{DynamicResource TestConfigTime}" HorizontalContentAlignment="Center" FontSize="15" ToolTip="{DynamicResource ToolTipTime}"/>
+                                    <CheckBox Name="Timer" Grid.Column="1" IsChecked="False" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                    <al:TimePicker Name="TimerPick" Background="WhiteSmoke" SelectedHour="0" SelectedMinute="15" SelectedSecond="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                                <Grid Grid.Row="2" Background="LightGray">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Content="{DynamicResource TestConfigDifficult}" HorizontalContentAlignment="Center" FontSize="15"  ToolTip="{DynamicResource ToolTipDifficult}"/>
+                                    <CheckBox Name="DifficultQuestions" Grid.Column="1" IsChecked="False" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="1" Background="LightGray">
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Content="{DynamicResource TestConfigFormat}" HorizontalContentAlignment="Center" FontSize="15" ToolTip="{DynamicResource ToolTipFormat}"/>
+                                    <ComboBox Name="ResultFormat" Grid.Column="1" FontSize="14">
+                                        <ComboBoxItem Content="{DynamicResource TestConfigFormat0}"/>
+                                        <ComboBoxItem Content="{DynamicResource TestConfigFormat1}"/>
+                                        <ComboBoxItem Content="{DynamicResource TestConfigFormat2}"/>
+                                    </ComboBox>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Tag="0" FontSize="20" Content="{DynamicResource TestConfigLabelName}" HorizontalContentAlignment="Center"/>
+                                <Label Grid.Column="1" Name="TestName" Tag="0" FontSize="20" Content="None" HorizontalContentAlignment="Center"/>
+                            </Grid>
+                            <Grid Grid.Row="6">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Tag="0" FontSize="20" Content="{DynamicResource TestConfigLabelCatName}" HorizontalContentAlignment="Center"/>
+                                <Label Grid.Column="1" Name="TestCategory" Tag="0" FontSize="20" Content="None" HorizontalContentAlignment="Center"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

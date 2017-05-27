@@ -1,0 +1,154 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BPVTests.Localisation"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="CreatorMenuCreate">Create Test</v:String>
+    <v:String x:Key="CreatorMenuSave">Save Test</v:String>
+    <v:String x:Key="CreatorUserMenuLocal">Language</v:String>
+    <v:String x:Key="CreatorUserMenuLocal0">Russian</v:String>
+    <v:String x:Key="CreatorUserMenuLocal1">English</v:String>
+    <v:String x:Key="CreatorUserMenuAbout">About</v:String>
+    <v:String x:Key="CreatorUserMenuLogout">LogOut</v:String>
+    <v:String x:Key="UserMenuStart">Start Test</v:String>
+    <v:String x:Key="UserMenuDelete">Delete Test</v:String>
+    <v:String x:Key="UserMenuDeleteToolTip">Delete function is available only for Creators</v:String>
+    <v:String x:Key="CreatorPanel">Creator Panel</v:String>
+    <v:String x:Key="UserPanel">User Panel</v:String>
+    <v:String x:Key="QuestionsList">Questions</v:String>
+    <v:String x:Key="QuestionText">Question</v:String>
+    <v:String x:Key="QuestionType0">
+        A question with one correct answer</v:String>
+    <v:String x:Key="QuestionType1">
+        A question with several correct answers</v:String>
+    <v:String x:Key="QuestionType2">
+        Questions with the installation of the correct sequence</v:String>
+    <v:String x:Key="QuestionType3">Question with one correct answer (pictures)</v:String>
+    <v:String x:Key="QuestionType4">A question with several correct answers(pictures)</v:String>
+    <v:String x:Key="QuestionType5">Questions with a text answer</v:String>
+    <v:String x:Key="DifficultType0">Very simple question</v:String>
+    <v:String x:Key="DifficultType1">Simple question</v:String>
+    <v:String x:Key="DifficultType2">Normal question</v:String>
+    <v:String x:Key="DifficultType3">Hard question</v:String>
+    <v:String x:Key="DifficultType4">Very hard question</v:String>
+    <v:String x:Key="AddAnswerButton">Add answer</v:String>
+    <v:String x:Key="EveryQuestion">Question</v:String>
+    <v:String x:Key="Error">Warning</v:String>
+    <v:String x:Key="ToolTipQText">Question text</v:String>
+    <v:String x:Key="ToolTipQPic">Picture of the question(not necessary)</v:String>
+    <v:String x:Key="ToolTipDType">The complexity of the issue. Affects the multiplier points obtained during the passage</v:String>
+    <v:String x:Key="ToolTipQType">Type of question</v:String>
+    <v:String x:Key="ToolTipDT">1</v:String>
+    <v:String x:Key="AboutH">About</v:String>
+    <v:String x:Key="AboutText">The BPVTests program was created for educational purposes. ©Bernatsky Pavel 2017. </v:String>
+    <v:String x:Key="AboutButton">OK</v:String>
+    <v:String x:Key="ToolTipAPic">Inserting an image in answer (necessary)</v:String>
+    <v:String x:Key="ToolTipAText">Answer text</v:String>
+    <v:String x:Key="ToolTipADnD">Drag for the area below the text of the answer</v:String>
+    <v:String x:Key="TestConfigFisherQ">Shuffle questions?</v:String>
+    <v:String x:Key="TestConfigFisherA">Shuffle answers?</v:String>
+    <v:String x:Key="TestConfigDifficult">Consider complexity?</v:String>
+    <v:String x:Key="TestConfigTime">Turn on the timer?</v:String>
+    <v:String x:Key="TestConfigStrong">Strict answers?</v:String>
+    <v:String x:Key="TestConfigFormat">Result format</v:String>
+    <v:String x:Key="TestConfigFormat0">Counted / Not counted</v:String>
+    <v:String x:Key="TestConfigFormat1">10-point format</v:String>
+    <v:String x:Key="TestConfigFormat2">%-format</v:String>
+    <v:String x:Key="TestsLabel">Test</v:String>
+    <v:String x:Key="TestConfigLabelName">Selected test:</v:String>
+    <v:String x:Key="TestConfigLabelCatName">Selected category:</v:String>
+    <v:String x:Key="ToolTipFisherA">The answers of each question will be shuffled randomly</v:String>
+    <v:String x:Key="ToolTipFisherQ">The questions will be shuffled randomly</v:String>
+    <v:String x:Key="ToolTipDifficult">On/off complexity multiplier</v:String>
+    <v:String x:Key="ToolTipStrong">When on the mode of strict answers in questions with multiple answers, you must specify all the correct answers</v:String>
+    <v:String x:Key="ToolTipTime">
+        Time to run the test</v:String>
+    <v:String x:Key="ToolTipFormat">
+        The format in which the result of the test will be presented</v:String>
+    <v:String x:Key="TestConfigLabel">
+        Passage of the test</v:String>
+    <v:String x:Key="TestLabel">Tests</v:String>
+    <v:String x:Key="TestAgree">Confirm selection</v:String>
+    <v:String x:Key="TestEnd">
+        Complete test</v:String>
+    <v:String x:Key="TestNext">Next question</v:String>
+    <v:String x:Key="TestPause">Pause</v:String>
+    <v:String x:Key="TestContinue">Continue</v:String>
+    <v:String x:Key="TestExit">Exit</v:String>
+    <v:String x:Key="TestTimeOut">
+        Time is over. The test is not passed!</v:String>
+    <v:String x:Key="TestSuccess">The test is passed!</v:String>
+    <v:String x:Key="TestFail">The test is not passed!</v:String>
+    <v:String x:Key="TestMIN">
+        Minimum for passage:</v:String>
+    <v:String x:Key="AuthLogName">Username</v:String>
+    <v:String x:Key="AuthLogPass">Password</v:String>
+    <v:String x:Key="AuthPanel">Authorization panel</v:String>
+    <v:String x:Key="AuthWindow">Authorization / Registration</v:String>
+    <v:String x:Key="AuthLogIn">
+        Log in</v:String>
+    <v:String x:Key="RegPanel">Registration panel</v:String>
+    <v:String x:Key="RegName">Username</v:String>
+    <v:String x:Key="RegPass">Password</v:String>
+    <v:String x:Key="RegCreator">Creator</v:String>
+    <v:String x:Key="RegUser">User</v:String>
+    <v:String x:Key="RegIn">
+        Sign up</v:String>
+    <v:String x:Key="CreateTestWindow">Creating a test</v:String>
+    <v:String x:Key="CreateTestName">Test name</v:String>
+    <v:String x:Key="CreateTestCat">Test category</v:String>
+    <v:String x:Key="CreateTestCatToolTip">Create new category</v:String>
+    <v:String x:Key="CreateTestNofQ">Number of questions</v:String>
+    <v:String x:Key="CreateTestMinSuccess">Minimum percentage</v:String>
+    <v:String x:Key="CreateTestMinSuccessToolTip">The percentage of points scored for the test. Default 40%</v:String>
+    <v:String x:Key="CreateTestButton">Create</v:String>
+    <v:String x:Key="CreateTestCancel">Cancel</v:String>
+    <v:String x:Key="CreateCatWindow">Creating a category</v:String>
+    <v:String x:Key="CreateCatNameToolTip">Name of new category</v:String>
+    <v:String x:Key="CreateCatButton">Create</v:String>
+    <v:String x:Key="CreateCatCancel">Cancel</v:String>
+    <v:String x:Key="EndTestOK">OK</v:String>
+    <v:String x:Key="TestSaveError">Error saving!</v:String>
+    <v:String x:Key="TestSaveProblem0">
+        Unfilled questions: </v:String>
+    <v:String x:Key="TestSaveProblem1">Questions with an unselected type: </v:String>
+    <v:String x:Key="TestSaveProblem2">Unfilled answers: </v:String>
+    <v:String x:Key="TestSaveProblem3">Questions with unanswered answers: </v:String>
+    <v:String x:Key="TestSaveProblem4">Answers with unselected pictures: </v:String>
+    <v:String x:Key="AuthProblem0">Username is not set!</v:String>
+    <v:String x:Key="AuthProblem1">Password not set!</v:String>
+    <v:String x:Key="AuthProblem2">
+        Database Error!</v:String>
+    <v:String x:Key="AuthProblem3">
+        There is no user with such data!</v:String>
+    <v:String x:Key="AuthProblem4">
+        A user with this name already exists!</v:String>
+    <v:String x:Key="AuthProblem5">
+        User type not selected!</v:String>
+    <v:String x:Key="RegSuccess">
+        Registration is successful!</v:String>
+    <v:String x:Key="CreateCatProblem0">The category name is not set!</v:String>
+    <v:String x:Key="CreateCatProblem1">This category already exists!</v:String>
+    <v:String x:Key="TestCreateProblem0">
+        The test name is not set!</v:String>
+    <v:String x:Key="TestCreateProblem1">The test category is not defined!</v:String>
+    <v:String x:Key="TestCreateProblem2">
+        The number of questions is not specified!</v:String>
+    <v:String x:Key="TestCreateProblem3">
+        Wrong number format for questions!</v:String>
+    <v:String x:Key="TestCreateProblem4">So number of questions are not supported!</v:String>
+    <v:String x:Key="TestCreateProblem5">
+        Invalid number format!</v:String>
+    <v:String x:Key="TestCreateProblem6">
+        Percentages only from 0 to 100!</v:String>
+    <v:String x:Key="TestCreateProblem7">Database Error!</v:String>
+    <v:String x:Key="TestCreateProblem8">
+        A test with this name already exists!</v:String>
+    <v:String x:Key="TestSelectProblem">
+        The test is not selected!</v:String>
+    <v:String x:Key="TestCreateProblem">
+        The test is not created!</v:String>
+    <v:String x:Key="TestSaveWarn">
+        The test you created is not saved! When the window is closed, the test will not be saved! Are you sure you want to get out?</v:String>
+    <v:String x:Key="TestProblem0">
+        Incorrect test!</v:String>
+</ResourceDictionary>

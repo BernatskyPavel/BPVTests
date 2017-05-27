@@ -1,0 +1,80 @@
+﻿<Window x:Class="BPVTests.Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BPVTests"
+        mc:Ignorable="d"
+        Title="Test" Height="525" Width="600" MinHeight="525" MinWidth="600" WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize" ShowInTaskbar="False">
+    <Grid Name="MainGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/Backgrounds/untitled.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Border BorderBrush="Gray" BorderThickness="1">
+                <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" FontSize="24" Content="{DynamicResource TestLabel}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        <TextBox FontSize="20" Name="QuestionText" IsReadOnly="True" Grid.Row="2" Width="500" Height="100" BorderThickness="0"/>
+                        <Image Name="ImageQuestion" Grid.Row="1" HorizontalAlignment="Center" Visibility="Collapsed" Source="pack://application:,,,/Icon/add.png"/>
+                    </Grid>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+        <ScrollViewer Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <StackPanel Name="TestAnswers" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="Grid_PreviewMouseLeftButtonUp" PreviewMouseMove="Grid_PreviewMouseMove" DragEnter="Grid_DragEnter" Drop="Grid_Drop" >
+
+            </StackPanel>
+        </ScrollViewer>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="{DynamicResource TestExit}" Name="Exit" FontSize="14" Grid.Column="0" Click="Exit_Click"/>
+                <Button Content="{DynamicResource TestPause}" Tag="0"  Name="Pause" FontSize="14" Grid.Column="2" Click="Pause_Click"/>
+                <Button Content="{DynamicResource TestAgree}" Name="Agreed" FontSize="14" Grid.Column="4" Click="Agreed_Click"/>
+                <Button Content="{DynamicResource TestNext}" Tag="0" FontSize="14" Name="NextQ" Grid.Column="6" Click="NextQ_Click"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Name="QuestionCount" Grid.Column="1"/>
+                <Label Name="QuestionDifficult" Grid.Column="5"/>
+                <Label Name="TimeLabel" Grid.Column="3" Content="00.00.00" HorizontalContentAlignment="Right" FontSize="14"/>
+                <Label Grid.Column="3" Content="Осталось:" HorizontalContentAlignment="Left" FontSize="14"/>
+            </Grid>
+            <Grid Grid.Row="0">
+                <ProgressBar Background="White" BorderBrush="Gray" Name="Progress"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="BPVTests.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BPVTests"
+        mc:Ignorable="d"
+        Title="About" Height="200" Width="400" MaxHeight="200" MaxWidth="400" MinHeight="200" MinWidth="400" Icon="pack://application:,,,/Icon/info.png">
+    <Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Backgrounds/back.jpg"/>
+    </Window.Background>
+    <Window.Foreground>
+        <SolidColorBrush>White</SolidColorBrush>
+    </Window.Foreground>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Foreground="White" Content="{DynamicResource AboutH}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Text="{DynamicResource AboutText}" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Button Grid.Row="2" Height="30" Width="150" Content="{DynamicResource AboutButton}" Click="Button_Click"/>
+    </Grid>
+</Window>
